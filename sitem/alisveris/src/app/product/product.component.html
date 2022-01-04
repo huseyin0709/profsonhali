@@ -1,0 +1,25 @@
+<app-category></app-category>
+<body>
+    
+<div class="form-group">
+    <input class="form-control" id="productName" placeholder="Ürün Ara" [(ngModel)]="filterText" />
+    <small *ngIf="filterText">
+    Şu anda <strong>{{filterText}}</strong> aradınız
+  </small>
+</div>
+<div class="row">
+    <div *ngFor="let urun of products | productFilter : filterText" class="card" style="width: 18rem;">
+        <img [src]="urun.imageUrl" class="card-img-top" alt="...">
+        <hr>
+        <div class="card-body">
+            <h5 class="card-title">{{urun.name | uppercase}} {{urun.price | currency : 'USD'}}</h5>
+            <p class="card-text">{{urun.description}}</p>
+            <div id="aaa">
+            <a (click)=addToChart(urun) class="button"><span>Sepete Ekle</span></a>
+            </div>      
+        </div>
+    </div>
+</div>
+
+
+</body>

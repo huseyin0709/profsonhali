@@ -1,0 +1,83 @@
+<body>
+  <div class="navbar">
+    <a class="navbar-brand" routerLink="/products">
+
+      <img src="https://i.imgur.com/D3oYCHb.png" alt="logo">
+    </a>
+
+
+    <ul>
+      <li>
+        <a class="nav-link active" *ngIf="isLoggedIn()==true" routerLink="/products">
+          <span data-feather="home"></span>
+          <span class="sr-only">Mağaza</span>
+        </a>
+        <a class="nav-link" *ngIf="isLoggedIn()==true" routerLink="/product-add">
+          <span data-feather="file">Ürün Ekle</span>
+
+        </a>
+        <a class="nav-link" *ngIf="isLoggedIn()==true" routerLink="/products">
+          <span data-feather="shopping-cart">Ürünler</span>
+
+        </a>
+        <a class="nav-link" *ngIf="isLoggedIn()==true" routerLink="/cart-add">
+          <span data-feather="bar-chart-2" class="fa fa-shopping-cart">Sepetim</span>
+
+        </a>
+        <a *ngIf="isLoggedIn()==false" class="nav-link" routerLink="login">
+          <span>Giriş Yap</span>
+        </a>
+        <a *ngIf="isLoggedIn()==true" (click)="logOut()" class="nav-link">
+          <span>Çıkış Yap</span>
+
+        </a>
+      </li>
+    </ul>
+
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Saved reports</span>
+            <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
+          <ul class="navto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Current month
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Last quarter
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Social engagement
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Year-end sale
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>
+
+</body>

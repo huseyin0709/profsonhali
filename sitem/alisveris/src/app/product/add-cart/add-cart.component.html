@@ -1,0 +1,15 @@
+<body>
+    <h1>Sepetim</h1>
+<div class="row">
+    <div *ngFor="let urun of products" class="card" style="width: 18rem;">
+        <img [src]="urun.imageUrl" class="card-img-top" alt="...">
+        <hr>
+        <div class="card-body">
+            <h5 class="card-title">{{urun.name | uppercase}} {{urun.price | currency : 'USD'}}</h5>
+            <p class="card-text">{{urun.description}}</p>
+            <div id="aaa">
+            </div>
+        </div>
+    </div>
+</div>
+</body>

@@ -1,0 +1,34 @@
+<body>
+    
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+<form #loginForm="ngForm" (ngSubmit)="login()" class="form-signin">
+    <h3>E-Ticaret App</h3>
+    <div class="text-center mb-4">
+        <h1 class="h3 mb-3 fw-normal">Sisteme Giriş</h1>
+    </div>
+    <div class="form-label-group">
+        <input type="text" [(ngModel)]="model.userName" name="userName"
+        class="form-control" placeholder="Kullanıcı Adı">
+    </div>
+    <div class="form-label-group">
+        <input type="password" [(ngModel)]="model.password" name="password"
+        class="form-control" placeholder="Şifre">
+    </div>
+    <button class="button" type="submit"><span>Giriş</span></button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017-2021</p> 
+</form>
+</body>
+<head>
+    <!-- Design by foolishdeveloper.com -->
+      <title>Glassmorphism login Form Tutorial in html css</title>
+   
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+      <!--Stylesheet-->
+      
+  </head>
+  
